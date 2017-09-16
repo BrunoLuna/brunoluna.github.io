@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+
+.galeria{
+	margin: 20px auto;
+	width: 1200px;
+	height: 400px;
+	position: relative;
+	overflow: hidden;
+	border: 3px solid #cbcbcb;
+}
+
+.fotoslide{
+	position: absolute;
+	opacity: 0;
+	animation-name: animacao;
+	animation-duration: 25s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes animacao{
+	
+	25%{
+		opacity: 1;
+		transform:scale(1.1,1.1);
+	}
+	
+	50%{
+		opacity: 0;
+
+	}
+}
+
+.fotoslide:nth-child(1){
+	animation-delay: 0s;
+}
+.fotoslide:nth-child(2){
+	animation-delay: 9s;
+}.fotoslide:nth-child(3){
+	animation-delay: 19s;
+}
